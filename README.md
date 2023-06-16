@@ -1,13 +1,17 @@
 # Springboot-test
 
-JAVA 17
+-----JAVA 17-----
 
 mvn clean install
-mvn install
-mvn test
-mvn verify
-mvn site
 
+mvn install
+
+mvn test
+
+mvn verify
+
+mvn site
+--------------------------------------------------------------------------------------------------------------------
 # Spring boot starter test
 
 	       <dependency>
@@ -16,7 +20,7 @@ mvn site
 			<scope>test</scope>
 		</dependency>
 
-
+--------------------------------------------------------------------------------------------------------------------
 # Maven surfire report. /target directory
 
 			<plugin>
@@ -31,7 +35,7 @@ mvn site
 					</profiles>
 				</configuration>
 			</plugin>
-
+--------------------------------------------------------------------------------------------------------------------
 # Jacoco report. /target directory
 
  			<plugin>
@@ -53,7 +57,7 @@ mvn site
 					</execution>
 				</executions>
 			</plugin>
-
+--------------------------------------------------------------------------------------------------------------------
 # Actuator
 
 Actuator is a powerful feature that provides several production-ready tools and endpoints to monitor and manage your application. It enables you to gather useful information about your application's health, metrics, configuration, and more.
@@ -144,7 +148,7 @@ here are these endpoints, you can configure whatever you like to set up your app
 for example, for this post method:  http://localhost:9090/actuator/loggers 
 you can change the log levels and tell spring do not display debug level logs in production. 
 
-
+--------------------------------------------------------------------------------------------------------------------
 
 # Spring logging
 
