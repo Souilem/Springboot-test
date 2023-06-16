@@ -1,12 +1,16 @@
 # Springboot-test
+
 JAVA 17
 
---> mvn clean install
---> mvn install
---> mvn test
---> mvn verify
---> mvn site
+-mvn clean install
 
+-mvn install
+
+-mvn test
+
+-mvn verify
+
+-mvn site
 
 # Spring boot starter test
 
