@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: Spring Boot Tutorial
+
+
+logging:
+  level:
+    root: ERROR
+    dproduction-dao: DEBUG
+    dproduction-controller: INFO
+    dproduction: INFO
+
+  group:
+    spring: "org.springframework, org.springdoc"
+    dproduction-dao: "com.dproduction.dao"
+    dproduction-controller: "com.dproduction.controller"
+    dproduction: "com.dproduction"
+
+
+
+  tomcat:
+    threads:
+      max: 5
+    max-connections: 10
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+    configprops:
+      show-values: always
+    env:
+      show-values: always
+    loggers:
+      enabled: true
+  server:
+    port: ${server.port:9090}
+
+#flyway:
+#  enabled: true
+#  locations: classpath:resources/db/migration
+#
+#spring:
+#  flyway:
+#    enabled: true
