@@ -1,6 +1,6 @@
 # Springboot-test
 
------JAVA 17-----
+JAVA 17
 
 mvn clean install
 
