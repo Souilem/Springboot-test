@@ -22,12 +22,43 @@ JAVA 17
 
 
 # Maven surfire report
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<reportsDirectory>${project.build.directory}/surefireProduction-reports</reportsDirectory>
+					<reportFormat>html</reportFormat>
+					<trimStackTrace>false</trimStackTrace>
+					<profiles>
+						<profile>asciidoctor</profile>
+					</profiles>
+				</configuration>
+			</plugin>
 
 # Jacoco report
-
+ 			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 # Actuator 
+
+
         "self": {
             "href": "http://localhost:9090/actuator",
             "templated": false
@@ -110,3 +141,5 @@ JAVA 17
         }
 
 # Spring logging
+
+https://www.baeldung.com/spring-boot-logging#:~:text=In%20the%20case%20of%20logging,Spring%20Boot%202.x).
