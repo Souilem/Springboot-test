@@ -2,26 +2,23 @@
 
 JAVA 17
 
--mvn clean install
-
--mvn install
-
--mvn test
-
--mvn verify
-
--mvn site
+mvn clean install
+mvn install
+mvn test
+mvn verify
+mvn site
 
 # Spring boot starter test
 
-	   <dependency>
+	       <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
 
-# Maven surfire report
+# Maven surfire report. /target directory
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -35,7 +32,8 @@ JAVA 17
 				</configuration>
 			</plugin>
 
-# Jacoco report
+# Jacoco report. /target directory
+
  			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -56,8 +54,11 @@ JAVA 17
 				</executions>
 			</plugin>
 
-# Actuator 
+# Actuator
 
+Actuator is a powerful feature that provides several production-ready tools and endpoints to monitor and manage your application. It enables you to gather useful information about your application's health, metrics, configuration, and more.
+
+here are these endpoints, you can configure whatever you like to set up your application logs, metrics, beans...
 
         "self": {
             "href": "http://localhost:9090/actuator",
@@ -139,6 +140,11 @@ JAVA 17
             "href": "http://localhost:9090/actuator/mappings",
             "templated": false
         }
+
+for example, for this post method:  http://localhost:9090/actuator/loggers 
+you can change the log levels and tell spring do not display debug level logs in production. 
+
+
 
 # Spring logging
 
