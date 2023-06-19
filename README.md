@@ -146,9 +146,6 @@ here are these endpoints, you can configure whatever you like to set up your app
             "templated": false
         }
 
-for example, for this post method:  http://localhost:9090/actuator/loggers 
-you can change the log levels and tell spring do not display debug level logs in production. 
-
 --------------------------------------------------------------------------------------------------------------------
 
 # Spring logging
